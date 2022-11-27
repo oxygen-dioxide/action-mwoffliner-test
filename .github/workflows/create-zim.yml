@@ -19,4 +19,4 @@ jobs:
       run: npm i -g mwoffliner
 
     - name: run mwoffliner
-      run: mwoffliner --mwUrl=http://meta.miraheze.org/ --adminEmail=foo@bar.net
+      run: mwoffliner --mwUrl=http://meta.miraheze.org/ --adminEmail=foo@bar.net --optimisationCacheUrl=""
