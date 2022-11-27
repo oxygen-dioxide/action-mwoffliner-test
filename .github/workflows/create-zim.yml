@@ -1,0 +1,22 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  create-zim:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ 'ubuntu-latest' ]
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: git checkout
+      run: git checkout main      
+
+    - name: install mwoffliner
+      run: npm i -g mwoffliner
+
+    - name: run mwoffliner
+      run: mwoffliner --help
